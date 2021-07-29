@@ -1,0 +1,118 @@
+<div class="wrapper">
+  <!-- <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="javascript:;" style="font-size:20px;"> NEC </a>
+        <button aria-controls="navbarSupportedContent" aria-label="Toggle navigation" class="navbar-toggler"
+          [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="example-header-2" type="button">
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+      </div>
+      <div class="navbar-collapse" [isAnimated]="true" [collapse]="isCollapsed" id="example-header-2">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a style="font-size:20px;"> NEC </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="example-header-2"
+                type="button">
+                <span> </span> <span> </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav mx-auto">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="landing">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="sponsors">
+              Sponsors
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="login">
+              Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="register">
+              Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <section class="section-sections bg-gradient-default" style="padding-top: 20vh;">
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class="section-description text-center">
+          <h2 class="display-2" style="color:#1B4965">Sponsor</h2>
+          <h4 style="color:#1B4965">Who Believe in Us</h4>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="section-cols">
+
+        <hr class="hr w-75 text-center mr-auto ml-auto">
+        <div class="row justify-content-center col-md-12 m-0 p-0">
+          <div class="card col-md-3 col-lg-3" *ngFor="let s of details.spo">
+            
+            <div class="card-header">
+              <h4 class="card-title text-center mb-0">{{s.sponsor}}</h4>
+            </div>
+            <div class="card-body">
+              <img alt="" class="shadow sponsor" src={{s.img}} />
+            </div>
+            <div class="card-footer text-center mb-0">
+              <h6 card="mb-0">{{s.description}}</h6>
+            </div>
+
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sections bg-gradient-default" style="padding-top: 0px;">
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class="section-description text-center">
+          <h2 class="display-2" style="color: #1B4965">Associates</h2>
+          <h4 style="color:#1B4965">Who Believe in Us</h4>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="section-cols">
+
+        <hr class="hr w-75 text-center mr-auto ml-auto">
+        <div class="row justify-content-center col-md-12 m-0 p-0">
+          <div class="card col-md-3 col-lg-3" *ngFor="let a of details.asso">
+            
+            <div class="card-header">
+              <h4 class="card-title text-center mb-0">{{a.associate}}</h4>
+            </div>
+            <div class="card-body">
+              <img alt="" class="shadow sponsor" src={{a.img}} />
+            </div>
+            <div class="card-footer text-center mb-0">
+              <h6 card="mb-0">{{a.description}}</h6>
+            </div>
+
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

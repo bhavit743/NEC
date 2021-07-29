@@ -1,0 +1,35 @@
+.bg-gradient-default{
+background: white !important;
+}
+
+.sponsor {
+  height: 220px;
+  width: 354px;
+}
+
+.card {
+  margin: 25px;
+  border-radius: 1.25rem;
+}
+
+.card-body {
+  padding: 0;
+  // padding-bottom: 1.5rem;
+}
+
+.wrapper {
+  background: #1a194d;
+}
+
+
+
+.hr{
+  border-top: 1px solid rgb(102, 204, 255);
+  visibility: visible;
+  animation-delay: 0.3s;
+  animation-name: zoomIn;
+}
+
+h6{
+  margin-bottom: 0;
+}

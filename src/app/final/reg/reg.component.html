@@ -1,0 +1,403 @@
+<div class="wrapper">
+  <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="javascript:;" style="font-size:20px;"> NEC </a>
+        <button aria-controls="navbarSupportedContent" aria-label="Toggle navigation" class="navbar-toggler"
+          [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="example-header-2" type="button">
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+      </div>
+      <div class="navbar-collapse" [isAnimated]="true" [collapse]="isCollapsed" id="example-header-2">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a style="font-size:20px;"> NEC </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="example-header-2"
+                type="button">
+                <span> </span> <span> </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav mx-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> About Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> Products </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> Contact Us </a>
+          </li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="landing">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="sponsors">
+              Sponsors
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="login">
+              Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="register">
+              Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="section-shaped my-0 skew-separator skew-mini">
+    <div class="page-header page-header-small header-filter">
+      <div class="page-header-image" style="background-image: url('assets/img/pages/georgie.jpg');"></div>
+      <div class="container">
+        <div class="header-body text-center mb-7">
+          <div class="row justify-content-center" style="margin-top:10vh;">
+            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+              <h1 class="text-white">Registration</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-secondary">
+    <div class="container bg-white card mb-0" style="width: 90%;">
+      <div class="row">
+        <div class="col-md-10 mx-auto ml-auto">
+          <div class="section">
+            <div class="tab-content">
+              <div class="tab-pane active" id="link1">
+                <div>
+                  <header>
+                    <h2 class="text-uppercase text-center">General information</h2>
+                  </header>
+                  <hr class="line-primary" />
+
+                  <br />
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#leader">
+                        Leader Name
+                      </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus5 === true }">
+                        <input name="leader" [(ngModel)]="leader" class="form-control" id="leader" name="leader" required="required"
+                          (blur)="focus5 = false" (focus)="focus5 = true" type="text" placeholder="Shivansh Singh" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels"> Track </label>
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                      <div class="form-group">
+                        <select name="track" [(ngModel)]="track" class="form-control" id="choices-single-default"
+                          name="choices-single-default">
+                          <option value="advance"> Advance </option>
+                          <option value="basic"> Basic </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#email"> College </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus3 === true }">
+                        <input class="form-control" list="colleges" id="college" name="college" required="required" type="email"
+                          (blur)="focus3 = false" [(ngModel)]="college" (ngModelChange)="clg_input_change()" (focus)="focus3 = true" placeholder="Indian Institute of Technology" />
+                          <datalist id="colleges">
+                            <option *ngFor="let college of college_list" style="margin: 5px; border: black;"
+                              value="{{college.name}}">{{college.name}}</option>
+                          </datalist>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#email"> Email </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus3 === true }">
+                        <input name="email" [(ngModel)]="email"  class="form-control" id="email"  required="required" type="email"
+                          (blur)="focus3 = false" (focus)="focus3 = true" placeholder="abc@gmail.com (gmail is preferred)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#address">
+                        College Address
+                      </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus2 === true }">
+                        <input name="address" [(ngModel)]="address"  class="form-control" id="address" required="required"
+                          (blur)="focus2 = false" (focus)="focus2 = true" type="email" placeholder="XYZ" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#city">
+                        City
+                      </label>
+                    </div>
+                    <div class="col-md-5 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input  name="city" [(ngModel)]="city"  class="form-control" id="city" (blur)="focus = false" (focus)="focus = true"
+                          required="required" type="text" placeholder="Mumbai" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#state">
+                        State
+                      </label>
+                    </div>
+                    <div class="col-md-5 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="state" (blur)="focus = false" (focus)="focus = true"
+                          name="state" [(ngModel)]="state"  required="required" type="text" placeholder="Maharashtra" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#country">
+                        Country
+                      </label>
+                    </div>
+                    <div class="col-md-5 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="country" (blur)="focus = false" (focus)="focus = true"
+                          name="country" [(ngModel)]="country" required="required" type="text" placeholder="India" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#pin">
+                        PIN Code
+                      </label>
+                    </div>
+                    <div class="col-md-3 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="pin" (blur)="focus = false" (focus)="focus = true"
+                          name="pin" [(ngModel)]="pin" required="required" type="tel" placeholder="400076" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#whatsapp">
+                        Whatsapp Number
+                      </label>
+                    </div>
+                    <div class="col-md-3 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="whatsapp" (blur)="focus = false" (focus)="focus = true"
+                          name="whatsapp" [(ngModel)]="whatsapp" required="required" type="tel" placeholder="+40 745 031 200" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#years">
+                        Years of active E-Cell
+                      </label>
+                    </div>
+                    <div class="col-md-3 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="years" (blur)="focus = false" (focus)="focus = true"
+                          name="years" [(ngModel)]="years" required="required" type="number" placeholder="23 " />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels" for="#refferal">
+                        CA-Refferal Code
+                      </label>
+                    </div>
+                    <div class="col-md-3 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="refferal" (blur)="focus = false" (focus)="focus = true"
+                          name="refferal" [(ngModel)]="refferal" required="required" type="tel" placeholder="cjkwj" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels"> Team Members </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false">
+                        <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                          <textarea class="form-control" id="mem" (blur)="focus = false" (focus)="focus = true"
+                            name="mem" [(ngModel)]="mem" required="required" type="text" placeholder="Enter all email ids">
+                            </textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3 align-self-center">
+                      <label class="labels"> No of times participated in NEC </label>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="form-group" [ngClass]="{ 'focused': focus === true }">
+                        <input class="form-control" id="refferal" (blur)="focus = false" (focus)="focus = true"
+                          name="nec" [(ngModel)]="nec" required="required" type="number" placeholder="1">
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+                  <div class="row mt-5 justify-content-center">
+                    <div class="col-md-6 text-center">
+                      <button class="btn btn-outline-primary" type="reset">
+                        reset
+                      </button>
+                      <button class="btn btn-primary" type="submit" (click)="submit()">
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="chk">
+        <h3 class="text-center">Other Participants</h3>
+        <hr class="line-primary w-75 mx-auto ml-auto" />
+        <div class="row justify-content-center" style="margin-top: 200px; margin-bottom: -175px;">
+          <div class="col-lg-4 col-md-6 mt-2" *ngFor="let o of other">
+            <div class="card card-pricing card-background">
+              <div class="card-body">
+                <h2 class="card-title text-primary text-center ml-2">
+                  {{o.college}}
+                </h2>
+                <ul>
+                  <li class="text-center"><strong> {{o.leader}} </strong> </li>
+                  <li class="text-center"><strong> {{o.email}} </strong>  </li>
+                  <li class="text-center"><strong> {{o.whatsapp}} </strong>  </li>
+                  <li class="text-center"><strong> {{o.track}} </strong>  </li>
+       
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+<footer class="footer footer-simple bg-gradient-default">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="footer-brand" href="javascript:;">
+          E-Cell IIT Bombay
+        </a>
+      </div>
+      <div class="col-md-6">
+        <div class="column">
+          <ul class="inline-menu text-center">
+            <li>
+              <a class="nav-link" href="javascript:;">
+                E-Summit
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;">
+                Eureka
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;">
+                NEC
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;">
+                EnSpace
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> SSP </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;">
+                EnB
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <ul class="social-buttons pull-right">
+          <li>
+            <a class="btn btn-icon btn-twitter btn-sm mr-1" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-icon btn-facebook btn-sm mr-1" href="https://www.facebook.com/CreativeTim"
+              target="_blank">
+              <i class="fab fa-facebook-square"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-icon btn-instagram btn-sm mr-1" href="https://www.instagram.com/CreativeTimOfficial"
+              target="_blank">
+              <i class="fab fa-instagram"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-icon btn-linkedin btn-sm mr-1" href="https://www.instagram.com/CreativeTimOfficial"
+              target="_blank">
+              <i class="fab fa-linkedin"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

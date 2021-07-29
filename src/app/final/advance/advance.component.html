@@ -1,0 +1,380 @@
+<header class="header-4">
+  <div class="header-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="javascript:;" style="font-size: 20px">
+            NEC
+          </a>
+          <button
+            aria-controls="navbarSupportedContent"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            [attr.aria-expanded]="!isCollapsed"
+            (click)="isCollapsed = !isCollapsed"
+            id="example-header-2"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+        </div>
+        <div
+          class="navbar-collapse"
+          [isAnimated]="true"
+          [collapse]="isCollapsed"
+          id="example-header-2"
+        >
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a style="font-size: 20px"> NEC </a>
+              </div>
+              <div class="col-6 collapse-close text-right">
+                <button
+                  aria-controls="navigation-index"
+                  aria-label="Toggle navigation"
+                  class="navbar-toggler"
+                  [attr.aria-expanded]="!isCollapsed"
+                  (click)="isCollapsed = !isCollapsed"
+                  id="example-header-2"
+                  type="button"
+                >
+                  <span> </span> <span> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav mx-auto">
+            <!-- <li class="nav-item">
+                    <a class="nav-link" href="javascript:;"> Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:;"> About Us </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:;"> Products </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:;"> Contact Us </a>
+                  </li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link btn btn-round btn-col" href="landing">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-round btn-col" href="sponsors">
+                Sponsors
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-round btn-col" href="login">
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-round btn-col" href="register">
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-header ">
+      <div
+        class="page-header-image"
+        style="background-image: url('assets/Advance.jpg')"
+      ></div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="
+              col-lg-5 col-md-7
+              mr-auto
+              text-left
+              d-flex
+              justify-content-center
+              flex-column
+            "
+          >
+            <h1
+              class="display-3"
+              style="    color: #bf0413;
+                text-align: center;
+                font-weight: 900;
+                font-size: 50px;
+              "
+            >
+              Advance
+            </h1>
+            <p
+              class="lead mt-0"
+              style="color: white; text-align: center; font-weight: 900"
+            >
+              Sowing the Seeds of Enterpreneurship
+              <br /><br />
+              The Basic track is for colleges that don't have an active
+              Entrepreneurship Cell functioning. Teams who are enthusiastic
+              about spreading awareness about entrepreneurship and forming an
+              Entrepreneurship Cell from scratch in their college/institution
+              are invited to participate in this track. Minimum 3 team members
+              are required for participation.
+            </p>
+            <br />
+            <div style="justify-content: center; align-items: center; padding-left: 40%;">
+              <div class="buttons">
+                <a class="btn btn-danger"  href="register"> Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="section bg-secondary">
+  <div class="container p-0" style="max-width: 85%;">
+    <div class="card card-profile shadow">
+      <div class="mx-3">
+        <!-- <div class="row justify-content-center">
+          <div class="text">
+            <h2 style="font-weight: 900; color: black" class="structure-heading">
+              STRUCTURE
+            </h2>
+          </div>
+        </div> -->
+        <h2 style="font-weight: 900; color: black" class="structure-heading text-center">
+          STRUCTURE
+        </h2>
+        <br />
+        <br />
+        <h2 class="rules-heading">Rules</h2>
+
+        <p class="rules-info" style="font-weight: 600; font-size: 20px">
+          <b>
+            Registered teams to adhere to the following rules throughout the
+            competition. <br />More rules can be added at the discretion of
+            E-Cell, IIT Bombay.</b
+          >
+        </p>
+        <br />
+        <div class="rules">
+          <ul class="fa-ul rules-listing">
+
+            <li class="rule-item" *ngFor="let r of details.rule">
+              <i class="fa-li fa fa-dot-circle-o" aria-hidden="true"></i>
+              {{r.description}}
+            </li>
+            
+          </ul>
+
+          <br />
+          <h2 class="rules-heading">Guidelines</h2>
+
+          <p class="rules-info" style="font-weight: 600; font-size: 20px">
+            <b
+              >Team Size: Minimum - 3 Members; Recommended - 15 to 20 Members</b
+            >
+          </p>
+          <br />
+
+          <div class="guidelines">
+            <ul class="fa-ul guidelines-listing">
+              <li class="guideline-item" *ngFor="let g of details.guide">
+                <i class="fa-li fa fa-dot-circle-o" aria-hidden="true"></i>
+                {{g.description}}
+              </li>
+              <br />
+            </ul>
+
+            <p class="rules-info" style="font-weight: 600; font-size: 20px">
+              <b
+                >NOTE : The Entrepreneurship Cell, IIT Bombay reserves the final
+                right to place a particular team in a fitting track.</b>
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <h3 class="display-3 "style="font-size: 60px;">Tasks</h3>
+          <button *ngIf="task1.length > 0" class="btn btn-primary  m-2" (click)="show(1)" >Stage 1</button>
+          <button *ngIf="task2.length > 0" class="btn btn-primary  m-2" (click)="show(2)">Stage 2</button>
+          <button *ngIf="task3.length > 0" class="btn btn-primary m-2" (click)="show(3)">Stage 3</button>
+          <button *ngIf="task4.length > 0" class="btn btn-primary m-2" (click)="show(4)" >Comprehensive</button>
+        </div>
+      </div>
+      <br><br>
+      <div class="container">
+
+          <div class="row justify-content-center" >
+            <div class="col-md-4" *ngFor="let t of task">
+                <div class="card card-lift--hover">
+                    <div class="card-header">
+                      <h5 class="h3 mb-0 text-center">{{t.task}}</h5>
+                    </div>
+                    <div class="card-body">
+                      <img alt="Image placeholder" class="img-fluid rounded m-0" src={{t.file}} />
+                      <p class="mb-4 text-center">
+                        <b>Total Points</b> {{t.total_points}}
+                        <br>
+                        <b>Deadline: </b> {{t.deadline}}
+                      </p>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="body1" >
+    <h1 class="col-md-6 mx-auto text-center" style="align-items: center; justify-content: center; color: rgb(238, 226, 64); font-size: 80px; border-bottom: #a35e10 solid 7px;"> Timeline</h1>
+    <div class="timeline1">
+      <div class="container1 left1">
+        <div class="content1">
+          <h2>2017</h2>
+          <p>Launch Day
+            Preliminary Task
+            Boss Task
+            Comprehensive Task
+            Launch.</p>
+        </div>
+      </div>
+      <div class="container1 right1">
+        <div class="content1">
+          <h2>2016</h2>
+          <p>Registration Deadline</p>
+        </div>
+      </div>
+      <div class="container1 left1">
+        <div class="content1">
+          <h2>2015</h2>
+          <p>Preliminary Task</p>
+        </div>
+      </div>
+      <div class="container1 right1">
+        <div class="content1">
+          <h2>2012</h2>
+          <p>Semifinalist Result & Stage 1 Launch</p>
+        </div>
+      </div>
+      <div class="container1 left1">
+        <div class="content1">
+          <h2>2011</h2>
+          <p>Bonus Checkpoint 1</p>
+        </div>
+      </div>
+      <div class="container1 right1">
+        <div class="content1">
+          <h2>2007</h2>
+          <p>Leaderboard 1<br>Update</p>
+        </div>
+      </div>
+      <div class="container1 left1">
+        <div class="content1">
+          <h2>2011</h2>
+          <p>Stage 2 Launch</p>
+        </div>
+      </div>
+      <div class="container1 right1">
+        <div class="content1">
+          <h2>2007</h2>
+          <p>Bonus Checkpoint 2</p>
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+
+
+<footer class="footer footer-simple bg-gradient-default">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="footer-brand" href="javascript:;"> E-Cell IIT Bombay </a>
+      </div>
+      <div class="col-md-6">
+        <div class="column">
+          <ul class="inline-menu text-center">
+            <li>
+              <a class="nav-link" href="javascript:;"> E-Summit </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> Eureka </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> NEC </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> EnSpace </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> SSP </a>
+            </li>
+            <li>
+              <a class="nav-link" href="javascript:;"> EnB </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <ul class="social-buttons pull-right">
+          <li>
+            <a
+              class="btn btn-icon btn-twitter btn-sm mr-1"
+              href="https://twitter.com/CreativeTim"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="btn btn-icon btn-facebook btn-sm mr-1"
+              href="https://www.facebook.com/CreativeTim"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-square"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="btn btn-icon btn-instagram btn-sm mr-1"
+              href="https://www.instagram.com/CreativeTimOfficial"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="btn btn-icon btn-linkedin btn-sm mr-1"
+              href="https://www.instagram.com/CreativeTimOfficial"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

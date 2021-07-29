@@ -1,0 +1,231 @@
+<div class="wrapper">
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="javascript:;" style="font-size: 20px">
+          NEC
+        </a>
+        <button
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          [attr.aria-expanded]="!isCollapsed"
+          (click)="isCollapsed = !isCollapsed"
+          id="example-header-2"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+      </div>
+      <div
+        class="navbar-collapse"
+        [isAnimated]="true"
+        [collapse]="isCollapsed"
+        id="example-header-2"
+      >
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a style="font-size: 20px"> NEC </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button
+                aria-controls="navigation-index"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed"
+                (click)="isCollapsed = !isCollapsed"
+                id="example-header-2"
+                type="button"
+              >
+                <span> </span> <span> </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav mx-auto">
+          <!-- <li class="nav-item">
+                  <a class="nav-link" href="javascript:;"> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:;"> About Us </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:;"> Products </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:;"> Contact Us </a>
+                </li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="javascript:;">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="javascript:;">
+              Sponsors
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-round btn-col" href="javascript:;">
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+ 
+    <div class="contactus-3">
+      <div class="page-header">
+        <img
+          alt=""
+          class="bg-image"
+          src="assets/img/ill/bg_contactus3.svg"
+        />
+      </div>
+      <div class="container pt-5">
+       
+        <div class="row">
+          <div class="col-md-12 text-center mb-5">
+            <h1 class="display-1">Leaderboard</h1>
+            <h3 class="lead">We'd like to talk more about what you need</h3>
+            <button class="btn btn-icon btn-primary mt-3" type="button"  (click)="handleClick1()" >
+                
+              <span class="btn-inner--icon">
+                <i class="bi bi-trophy-fill"> </i>
+              </span>
+              <span class="btn-inner--text"  > Leaderboard 1</span>
+            </button>
+            <button  class="btn btn-icon btn-primary mt-3" type="button" (click)="handleClick2()" >
+                <span class="btn-inner--icon">
+                  <i class="bi bi-trophy-fill" > </i>
+                </span>
+                <span class="btn-inner--text"> Leaderboard 2 </span>
+              </button>
+              <button class="btn btn-icon btn-primary mt-3" type="button" (click)="handleClick3()" >
+                <span class="btn-inner--icon">
+                  <i class="bi bi-trophy-fill"> </i>
+                </span>
+                <span class="btn-inner--text"> Leaderboard 3 </span>
+              </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+<div class="container">
+
+    <h2  style="padding: 20px;font-weight: 1000;  color: #66ccff;">NEC BASIC TRACK LEADERBOARD {{name}}</h2>
+
+    <div class="table-responsive table-hover table-striped table-bordered">
+        <table class="table">
+            <thead>
+            <tr style="color: #66ccff; background: transparent!important">
+                <th style="font-size: 20px;">Position</th>
+                <th style="font-size: 20px;">Team Id</th>
+                <th style="font-size: 20px;">Team Name</th>
+                <th style="font-size: 20px;">College Name</th>
+
+                <th style="font-size: 20px;">Score</th>
+            </tr>
+            </thead>
+            <tbody>
+                    
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+    <footer class="footer footer-simple bg-gradient-default">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <a class="footer-brand" href="javascript:;"> E-Cell IIT Bombay </a>
+            </div>
+            <div class="col-md-6">
+              <div class="column">
+                <ul class="inline-menu text-center">
+                  <li>
+                    <a class="nav-link" href="javascript:;"> E-Summit </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="javascript:;"> Eureka </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="javascript:;"> NEC </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="javascript:;"> EnSpace </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="javascript:;"> SSP </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="javascript:;"> EnB </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <ul class="social-buttons pull-right">
+                <li>
+                  <a
+                    class="btn btn-icon btn-twitter btn-sm mr-1"
+                    href="https://twitter.com/CreativeTim"
+                    target="_blank"
+                  >
+                    <i class="fab fa-twitter"> </i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="btn btn-icon btn-facebook btn-sm mr-1"
+                    href="https://www.facebook.com/CreativeTim"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook-square"> </i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="btn btn-icon btn-instagram btn-sm mr-1"
+                    href="https://www.instagram.com/CreativeTimOfficial"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram"> </i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="btn btn-icon btn-linkedin btn-sm mr-1"
+                    href="https://www.instagram.com/CreativeTimOfficial"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"> </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
